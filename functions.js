@@ -16,6 +16,7 @@ module.exports.set = function (path, value, obj) {
 
 module.exports.get = function(obj, ...data) {
   return data.reduce(function(acc, key) {
+    if (!acc) return acc;
     return acc[`${key}`];
   }, obj);
 };
