@@ -22,7 +22,7 @@ class CroxyDB {
       throw new TypeError(this.message["errors"]["blankName"]);
     }
 
-    if(typeof data != 'number' && !data) {
+    if(typeof data != 'number' && typeof data != 'boolean' && !data) {
       throw new TypeError(this.message["errors"]["blankData"]);
     }
 
